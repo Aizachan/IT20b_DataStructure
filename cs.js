@@ -22,3 +22,31 @@ function computer(grade){
         console.log("Not within the transmutation ");
     }
 }
+//computerGrade(87);
+
+function login(username, password){
+    if (username === "cliffy" ){
+        if (password === "12345"){
+            console.log("Wellcome User");
+        }else{
+            console.log("Invalid Username or Password");
+        }
+    }
+}
+login("cliffy", "12345");
+function ticketPrice(age){
+   if (age < 18){ 
+    if (age < 5){
+        console.log("Ticket: free");
+    }else{
+        console.log("Ticket: Child Price");
+    }
+   }else{
+    if (age >= 60){
+        console.log("Ticket: Senior Price");
+    }else{
+        console.log("Ticket: Adult Price");
+    }
+   }
+}
+ticketPrice(70);

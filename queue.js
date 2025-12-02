@@ -29,17 +29,30 @@ class Queue{
     size(){
         return this.rearIndex - this.frontIndex +1;
     }
+    dequeue(){
+        //Correction Statement
+        if(this.is_empty()) return null;
+
+        const value = this.data[this.frontIndex];
+        delete this.data[this.frontIndex];
+        this.frontIndex++;
+        return value;
+
+    }
 }
 //
 
 let queue1 = new Queue();
 console.log(queue1.is_empty());
 queue1.enqueue(4);
-console.log("The current queue size is:" + queue1.siza());
+console.log("The current queue size is:" + queue1.size());
 queue1.enqueue(2);
-console.log("The current queue size is:" + queue1.siza());
+console.log("The current queue size is:" + queue1.size());
 queue1.enqueue(3);
-console.log("The current queue size is:" + queue1.siza());
+console.log("The current queue size is:" + queue1.size());
 console.log(queue1.is_empty());
 console.log(queue1.front());
-console.log("The current queue size is:" + queue1.siza());
+console.log("The current queue size is:" + queue1.size());
+console.log(queue1.dequeue()+" has been dequeue, the new front is: " + queue1.size);
+console.log(queue1.dequeue()+" has been dequeue, the new front is: " + queue1.size);
+console.log(traverse);
